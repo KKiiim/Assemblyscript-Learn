@@ -1,9 +1,9 @@
 name: as-tests
 on:
   pull_request:
-    branches: gtest-KKiiim
+    branches: main
   push:
-    branches: gtest-KKiiim
+    branches: main
 
 jobs:
   as-test:
