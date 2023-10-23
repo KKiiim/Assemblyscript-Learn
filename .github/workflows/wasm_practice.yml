@@ -1,0 +1,16 @@
+name: as-tests
+on:
+  pull_request:
+    branches: gtest-KKiiim
+  push:
+    branches: gtest-KKiiim
+
+jobs:
+  as-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: npm init
+        run: npm init && npm install --save-dec assemblyscript && npx asinit .
+      - name: run test 
+        run: npm run asbuild && npm test && npm start
