@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: npm install and init
-        run: npm install && npm init && npm install --save-dec assemblyscript && npx asinit .
+        run: npm init -y && npm install --save-dec assemblyscript && npx asinit .
       - name: run test 
         run: npm run asbuild && npm test && npm start
